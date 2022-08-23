@@ -1,0 +1,624 @@
+/************ OVERALL PAGE STYLES ************ /
+
+/*  CSS reset */
+html, body, div, span, h1, h2, h3, h4, p, header, nav, main, section, article, footer, ul, li, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* reusable variables */
+/* font color, font size, icons? block quotes? */
+/* mobile breakpoints */
+/* mixins */
+/* body styles */
+body {
+  font-family: "Roboto", sans-serif;
+  color: #113321;
+  background: #ffcb69;
+}
+
+/* typography */
+h1, h2, h3, h4 {
+  font-family: "Lora", serif;
+  color: #f55536;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: #293d32;
+}
+
+/************ HEADER ************/
+.header {
+  background: #5af25a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  text-shadow: #fff;
+  max-width: 100%;
+  display: block;
+}
+
+.banner__img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .banner__img {
+    max-width: 1300px;
+  }
+}
+
+.title {
+  text-align: center;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  color: #f55536;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 5.2rem;
+  letter-spacing: .3rem;
+  padding: 10px;
+  text-shadow: 3px 3px #fff;
+}
+
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 3.6rem;
+    text-shadow: 2px 2px #fff;
+  }
+}
+
+.title.secondary {
+  font-size: 3.6rem;
+}
+
+/* main nav */
+.nav {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 375px) {
+  .nav__menu {
+    max-width: 300px;
+  }
+}
+
+.nav__menu--item {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 2rem;
+  color: #f55536;
+  margin: 1rem;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+@media screen and (max-width: 375px) {
+  .nav__menu--item {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+}
+
+/* products nav */
+.products-nav {
+  width: 100%;
+  background: #fabc3c;
+}
+
+.products-nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 60%;
+  margin: 20px auto;
+}
+
+.products-nav__menu--item {
+  font-size: 2rem;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  .products-nav__menu--item {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .products-nav__menu {
+    display: inherit;
+    text-align: center;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+/************ MAIN CONTENT ************/
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffcb69;
+}
+
+.featured {
+  position: relative;
+  top: 0;
+}
+
+.featured__title {
+  padding: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .featured__title {
+    font-size: 2rem;
+    padding: 10px;
+  }
+}
+
+.featured__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .featured__container {
+    padding: 10px;
+  }
+}
+
+.featured__container__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.featured__container__card--img {
+  width: 200px;
+}
+
+@media screen and (max-width: 375px) {
+  .featured__container__card--img {
+    max-width: 150px;
+  }
+}
+
+.featured__container__card--name {
+  font-size: 1.8rem;
+  font-family: "Rubik Mono One", sans-serif;
+  text-shadow: 2px 2px #bbb;
+}
+
+@media screen and (max-width: 375px) {
+  .featured__container__card--name {
+    font-size: 1.4rem;
+    text-shadow: 1px 1px #bbb;
+  }
+}
+
+.featured__container__card--btn {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.6rem;
+  background: #fabc3c;
+  opacity: 1;
+  border: 2px solid #f55536;
+  border-radius: 60%;
+  padding: 1.2rem;
+}
+
+@media screen and (max-width: 375px) {
+  .featured__container__card--btn {
+    font-size: 1.4rem;
+  }
+}
+
+.featured__container__card--btn:hover {
+  opacity: 0.8;
+}
+
+.main {
+  background: #ffcb69;
+  padding: 3rem;
+}
+
+.main__heading {
+  padding-top: .5rem;
+}
+
+.main__content {
+  padding: 2.4rem;
+  font-size: 1.6rem;
+}
+
+/************ PRODUCTS GRID ************/
+.products {
+  padding: 1rem;
+}
+
+.products__title {
+  float: left;
+  width: 20%;
+  padding: 2rem;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 375px) {
+  .products__title {
+    float: none;
+    text-align: center;
+    width: auto;
+  }
+}
+
+.products__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.products__card {
+  margin: 10px;
+  padding: 10px;
+}
+
+.products__card--img {
+  max-height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.products__card--name {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.products__card--description {
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.products__card--btn {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.6rem;
+  background: #fabc3c;
+  opacity: 1;
+  border: 2px solid #f55536;
+  border-radius: 60%;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+  .products__card--btn {
+    font-size: 1.4rem;
+  }
+}
+
+.products__card--btn:hover {
+  opacity: 0.8;
+}
+
+/************ PRODUCTS DETAIL ************/
+.product-detail {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10%;
+}
+
+@media screen and (max-width: 375px) {
+  .product-detail {
+    display: inherit;
+  }
+}
+
+.product-detail__photos--img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.product-detail__form--type, .product-detail__form--qty {
+  border-radius: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  padding: 10px;
+  margin: 20px;
+  display: inline;
+  width: 50%;
+}
+
+@media screen and (max-width: 375px) {
+  .product-detail__form--type, .product-detail__form--qty {
+    display: inherit;
+    width: 80%;
+  }
+}
+
+.product-detail__form--btn {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.6rem;
+  background: #fabc3c;
+  opacity: 1;
+  border: 2px solid #f55536;
+  border-radius: 60%;
+  padding: 1.2rem;
+  padding: 2rem;
+  font-size: 2rem;
+  display: block;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 375px) {
+  .product-detail__form--btn {
+    font-size: 1.4rem;
+  }
+}
+
+.product-detail__form--text p {
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+/************ CONTACT FORM ************/
+.contact {
+  padding: 50px;
+}
+
+.contact > p, .contact > form > p, .contact > form > label {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.contact > form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact__basic-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+.contact__basic-info > input {
+  margin: 10px;
+  padding: 10px;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 1.8rem;
+  border: 2px solid #f55536;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.contact__comment {
+  margin: 10px;
+  padding: 10px;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 1.8rem;
+  border: 2px solid #f55536;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.contact__btn {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.6rem;
+  background: #fabc3c;
+  opacity: 1;
+  border: 2px solid #f55536;
+  border-radius: 60%;
+  padding: 1.2rem;
+  width: 200px;
+  padding: 2rem;
+  font-size: 2rem;
+  display: block;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 375px) {
+  .contact__btn {
+    font-size: 1.4rem;
+  }
+}
+
+.error {
+  border: 3px solid red !important;
+}
+
+.error-msg {
+  font-size: 20px;
+  color: red;
+  margin-top: 10px;
+}
+
+/************ FOOTER ************/
+.footer {
+  background: #fabc3c;
+  clear: both;
+  height: 200px;
+  padding: 3rem;
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer__nav {
+  float: left;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__nav {
+    margin-top: 20px;
+  }
+}
+
+.footer__nav__menu--item {
+  padding: .5rem;
+  font-size: 2rem;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__nav__menu--item {
+    margin-top: 20px;
+    display: inline;
+    font-size: 2.2rem;
+  }
+}
+
+.footer__text {
+  text-align: center;
+}
+
+.footer__text--title {
+  font-size: 2.6rem;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.footer__text--copyright {
+  font-size: 1.4rem;
+}
+
+.footer__social {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__social--icon {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .footer__social {
+    display: inline;
+    margin-top: 10px;
+  }
+}
+
+/************ ADDITIONAL STYLES ************/
+.remove {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

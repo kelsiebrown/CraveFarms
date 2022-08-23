@@ -1,0 +1,71 @@
+<%- include('./includes/header.ejs') %>
+
+<nav class="products-nav">
+    <ul class="products-nav__menu">
+        <button class="products-nav__menu--item" onclick="showAll()" id="link-all">shop all</button>
+        <button class="products-nav__menu--item" onclick="showSubscriptions()" id="link-subscriptions">farm boxes & subscriptions</button>
+        <button class="products-nav__menu--item" onclick="showProduce()" id="link-produce">fresh produce</button>
+        <button class="products-nav__menu--item" onclick="showOther()" id="other">dried & prepared goods</button>
+    </ul>
+</nav>
+
+</div>
+</header>
+
+<div class="wrapper">
+
+    <main class="container">
+        <a id="top"></a>
+
+        <section class="products" id="section-subscriptions">
+            <h3 class="products__title">subscriptions</h3>
+                <div class="products__grid">
+                    <% for (var i = 0 ; i < data[0].length ; i++){ %>
+                        <article class="products__card">
+                            <img src="img/<%= data[0][i].imageUrl %>" alt="<%= data[0][i].title %>" class="products__card--img">
+                            <h4 class="products__card--name"><%= data[0][i].title %></h4>
+                            <p class="products__card--description"><%= data[0][i].brief %></p>
+                            <a class="products__card--btn" href="/products/<%= data[0][i].id %>">$<%= data[0][i].price %></a>
+                        </article>
+                    <% } %>
+                </div>
+        </section>
+
+        <section class="products" id="section-produce">
+            <h3 class="products__title">produce</h3>
+
+            <div class="products__grid">
+                <% for (var i = 0 ; i < data[1].length ; i++){ %>
+                    <article class="products__card">
+                        <img src="img/<%= data[1][i].imageUrl %>" alt="<%= data[1][i].title %>" class="products__card--img">
+                        <h4 class="products__card--name"><%= data[1][i].title %></h4>
+                        <p class="products__card--description"><%= data[1][i].brief %></p>
+                        <a class="products__card--btn" href="/products/<%= data[1][i].id %>">$<%= data[1][i].price %></a>
+                    </article>
+                <% } %>
+            </div>
+
+        </section>
+
+        <section class="products" id="section-other">
+            <h3 class="products__title">dried & prepared goods</h3>
+
+            <div class="products__grid">
+                <% for (var i = 0 ; i < data[2].length ; i++){ %>
+                    <article class="products__card">
+                        <img src="img/<%= data[2][i].imageUrl %>" alt="<%= data[2][i].title %>" class="products__card--img">
+                        <h4 class="products__card--name"><%= data[2][i].title %></h4>
+                        <p class="products__card--description"><%= data[2][i].brief %></p>
+                        <a class="products__card--btn" href="/products/<%= data[2][i].id %>">$<%= data[2][i].price %></a>
+                    </article>
+                <% } %>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="../js/shop.js" type="text/javascript"></script>
+
+<%- include('./includes/footer.ejs') %>
