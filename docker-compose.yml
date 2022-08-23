@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+
+    db:
+        build:
+            context: ./db
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+        restart: always
+        networks:
+            backend: 
+        ports:
+            - "3306:3306"
+
+    nodeserver:
+        build:
+            context: ./app
+        environment:
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_ROOT_USER: ${MYSQL_ROOT_USER}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_HOST: ${MYSQL_HOST}
+        networks:
+            frontend:
+            backend:
+        ports:
+            - "3000:3000"
+        depends_on:
+            - db
+
+    nginx:
+        restart: always
+        build:
+            context: ./app/ui
+        volumes:
+            - ./app/ui/default.conf:/etc/nginx/nginx.conf
+        ports:
+            - "8080:80"
+        networks:
+            frontend:
+
+networks:
+    frontend:
+    backend:

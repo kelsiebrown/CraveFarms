@@ -1,0 +1,55 @@
+<%- include('./includes/header.ejs') %>
+
+</div>
+</header>
+
+<section class="featured">
+    <h2 class="featured__title">featured products</h2>
+
+    <div class="featured__container">
+        
+        <% for (var i = 0 ; i < 3 ; i++){ %>
+            <article class="featured__container__card">
+                <img src="img/<%= data[i].imageUrl %>" alt="<%= data[i].title %>" class="featured__container__card--img">
+                <h4 class="featured__container__card--name"><%= data[i].title %></h4>
+                <a class="featured__container__card--btn" href="/products/<%= data[i].id %>">$<%= data[i].price %></a>
+            </article>
+        <% } %>
+        
+    </div>
+</section>
+
+<main class="main">
+    <h3 class="main__heading">our story</h3>
+
+    <p class="main__content">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu. Modus argumentum ne qui tation efficiendi</p>
+
+    <h3 class="main__heading">press</h3>
+
+    <p class="main__content">"super fresh and delicious veggies" - <a href="" target="_blank" class="main__content--citation">Seattle Times, May 2021</a><br>
+
+    "super fresh and delicious veggies" - <a href="" target="_blank" class="main__content--citation">Seattle Times, May 2021</a></p>
+
+    <h3 class="main__heading">featured recipe</h3>
+
+    <p class="main__content">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu.</p>
+
+    <h3 class="main__heading">our story</h3>
+
+    <p class="main__content">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu. Modus argumentum ne qui tation efficiendi</p>
+
+    <h3 class="main__heading">press</h3>
+
+    <p class="main__content">"super fresh and delicious veggies" - <a href="" target="_blank" class="main__content--citation">Seattle Times, May 2021</a><br>
+
+    "super fresh and delicious veggies" - <a href="" target="_blank" class="main__content--citation">Seattle Times, May 2021</a></p>
+
+    <h3 class="main__heading">featured recipe</h3>
+
+    <p class="main__content">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant dolorum an. Per facer affert ut. Mei iisque mentitum moderatius cu. Sit munere facilis accusam eu dicat falli consulatu at vis. Te facilisis mnesarchum qui posse omnium mediocritatem est cu.</p>
+
+</main>
+
+</div>
+
+<%- include('./includes/footer.ejs') %>

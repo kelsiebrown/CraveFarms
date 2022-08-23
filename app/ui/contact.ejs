@@ -1,0 +1,53 @@
+<%- include('./includes/header.ejs') %>
+
+</div>
+</header>
+
+<div class="wrapper">
+
+    <main class="contact">
+
+        <p class="contact__text">Have a question? Fill out this form and we'll get back to you as soon as we can!</p>
+    
+        <form class="contact__form" id="contact-form">
+            <div class="contact__basic-info">
+                <input type="text" name="name" placeholder="Name" id="name">
+                <input type="email" name="email" placeholder="Email address" id="email">
+                <input type="tel" name="phone" placeholder="Phone number" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+
+            <p>Preferred contact method:</p>
+
+            <input type="radio" id="radio-email" name="radio-email" value="radio-email" checked>
+            <label for="radio-email">Email</label>
+
+            <input type="radio" id="radio-phone" name="radio-phone" value="radio-phone">
+            <label for="radio-phone">Phone</label>
+
+            <p>How did you hear about us?</p>
+
+            <input type="checkbox" id="checkbox-market" name="checkbox-market" value="Farmers market">
+            <label for="checkbox-market">Farmers market</label>
+
+            <input type="checkbox" id="checkbox-tv" name="checkbox-tv" value="Television">
+            <label for="checkbox-tv">TV</label>
+
+            <input type="checkbox" id="checkbox-radio" name="checkbox-radio" value="Radio ad">
+            <label for="checkbox-radio">Radio ad</label>
+
+            <input type="checkbox" id="checkbox-other" name="checkbox-other" value="Other">
+            <label for="checkbox-market">Other</label>
+
+            <textarea name="comment" rows="3" placeholder="Comment" id="comment" class="contact__comment"></textarea>
+
+            <input type="submit" value="Submit" class="contact__btn" id="submit">
+
+            <p class="contact__error"></p>
+        </form>
+
+    </main>
+</div>
+
+<script src="../js/contact.js" type="text/javascript"></script>
+
+<%- include('./includes/footer.ejs') %>
